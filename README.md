@@ -33,4 +33,5 @@ reference <- all_experiments$reference
 for (all columns in all_experiments) :
       curr_results <- spline_correct_gammas_v3.2(reference, current experiment, window_number = 10000, norm_to_constant = NA)
       curr_corrected <- curr_results[[2]]
-      corrected_results[,current experiment] <- curr_corrected```
+      corrected_results[,current experiment] <- curr_corrected
+
