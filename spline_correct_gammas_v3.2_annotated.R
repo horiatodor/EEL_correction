@@ -1,6 +1,6 @@
-#' Spline correction of condition-specific changes in fitness values.
+#' Correction of condition-specific changes in fitness values.
 #' 
-#' `spline_correct_gammas_v3` applies a correction to a vector of condition-specific changes in fitnesses which ablates any correlation between condition-specific changes in and reference fitnesses which
+#' `correct_l2fc_v3` applies a correction to a vector of condition-specific changes in fitnesses which ablates any correlation between condition-specific changes in and reference fitnesses which
 #' may have arisen from different effective experimental lengths.
 #'
 #' This function breaks the reference and condition-specific changes in fitnesses of a mutant library into bins of a specified size, in order of increasing reference fitness. For each bin, 
@@ -37,7 +37,7 @@
 #' @author Horia Todor and Lili Kim
 #'
 
-spline_correct_gammas3 <- function(initial_gammas, other_gammas, window_number = 10000, norm_to_constant = NA){
+correct_l2fc_3 <- function(initial_gammas, other_gammas, window_number = 10000, norm_to_constant = NA){
   
   #initialize vector of corrected condition-specific changes in fitnesses to be returned
   corrected_other <- rep(NA, length(other_gammas))
