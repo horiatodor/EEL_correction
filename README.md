@@ -7,7 +7,7 @@ R function to adjust condition-specific changes in fitness values, removing any 
 This function breaks the reference and condition-specific changes in fitnesses of a mutant library into bins of a specified size, in order of increasing reference fitness. For each bin, the median of the reference and condition-specific changes in fitnesses is taken. The difference in medians is added to all condition-specific changes in fitnesses within that bin such that the median value is the same as reference for all mutants in that bin. Done over the whole library, this removes the correlation effect which occurs from different effective experimental lengths. The function returns the corrected condition-specific changes in fitnesses and a summary table for each bin.
 
 # Code Usage
-The input format is ```correct_l2fc_v3(initial_gammas, other_gammas, window_number=10000, norm_to_constant=NA)```
+The input format is ```correct_l2fc_v3(initial_gammas, other_gammas, window_number=1000, norm_to_constant=NA)```
 
 ```initial_gammas``` and ```other_gammas``` are vectors containing the reference (```initial_gammas```) or condition-specific (```other_gammas```) fitnesses for all sgRNAs/mutants, assumed to be in the same order.
 
