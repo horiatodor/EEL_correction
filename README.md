@@ -11,7 +11,7 @@ The input format is ```spline_correct_gammas_v3.2(initial_gammas, other_gammas, 
 
 ```initial_gammas``` and ```other_gammas``` are vectors containing the reference (```initial_gammas```) or condition-specific (```other_gammas```) fitnesses for all sgRNAs/mutants, assumed to be in the same order.
 
-```window_number``` is the size of the bins. The number of bins depends on the size of the library. For Tn-seq data, 50 is likely appropriate, but for CRISPRi data, a larger bin size (200,1000) can be used, as there are more growth-deficient strains. default = 10000
+```window_number``` is the size of the bins. The number of bins depends on the size of the library. For Tn-seq data, 50 is likely appropriate, but for CRISPRi data, a larger bin size (200,1000) can be used, as there are more growth-deficient strains. default = 1000
 
 ```norm_to_constant``` this param depends on how the condition-specific L2FC was calculated. If both the condition-specific and reference fitness L2FCs were calculated compared to a t0 sample, use ```NA``` (default). If only the reference fitness L2FC was calculated compared to a t0, and the condition-specific L2FC was calculated compared to the reference endpoint, this value is the constant value (usually 0). 
 
