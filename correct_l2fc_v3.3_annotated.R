@@ -37,7 +37,7 @@
 #' @author Horia Todor and Lili Kim
 #'
 
-correct_l2fc_v3 <- function(initial_gammas, other_gammas, window_number = 10000, norm_to_constant = NA){
+correct_l2fc_v3 <- function(initial_gammas, other_gammas, window_number = 1000, norm_to_constant = NA){
   
   #initialize vector of corrected condition-specific changes in fitnesses to be returned
   corrected_other <- rep(NA, length(other_gammas))
